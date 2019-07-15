@@ -8,6 +8,7 @@ class Tax extends React.Component {
     }
   }
 
+  //Getting data from localStorage
   componentWillMount() {
     const tax = JSON.parse(localStorage.getItem('Tax'));
       this.setState({
@@ -16,10 +17,11 @@ class Tax extends React.Component {
   }
 
   render() {
-    const taxes = this.state.taxData!==null && this.state.taxData.map(item =>{
+    //setting items of tax in list
+    const taxes = this.state.taxData!==null && this.state.taxData.map(tax =>{
       return(
         <ul>
-          <li key={item.tax}>{item.tax}</li>
+          <li key={tax.tax}>{tax.tax}</li>
         </ul>
       )
     })
@@ -29,7 +31,7 @@ class Tax extends React.Component {
         <div className="row">
           <h3><b>All Taxes</b></h3>
         </div>
-        <div class="form-group row">
+        <div className="form-group row">
           <div className="col-sm-5">
             {taxes}
           </div>

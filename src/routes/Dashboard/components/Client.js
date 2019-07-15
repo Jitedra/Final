@@ -8,6 +8,7 @@ class Client extends React.Component {
     }
   }
 
+  //Getting data from localStorage
   componentWillMount(){
     const client = JSON.parse(localStorage.getItem('Details'));
     this.setState({
@@ -25,7 +26,7 @@ class Client extends React.Component {
             <label>Name</label>
           </div>
           <div className="col-sm-5">
-            <input type="text" className="form-control" placeholder="Enter your name" value={this.state.clientsData.name} />
+            <input type="text" className="form-control" readOnly placeholder="Enter your name" value={this.state.clientsData.name} />
           </div>
         </div>
         <div className="form-group row">
@@ -33,7 +34,7 @@ class Client extends React.Component {
             <label>Organisation</label>
           </div>
           <div className="col-sm-5">
-            <input type="text" className="form-control" placeholder="Your Organisation" value={this.state.clientsData.organisation} />
+            <input type="text" className="form-control" readOnly placeholder="Your Organisation" value={this.state.clientsData.organisation} />
           </div>
         </div>
         <div className="form-group row">
@@ -41,7 +42,7 @@ class Client extends React.Component {
             <label>Date Of Registration</label>
           </div>
           <div className="col-sm-5">
-            <input type="text" className="form-control" placeholder="Registration Date" value={this.state.clientsData.date} />
+            <input type="text" className="form-control" readOnly placeholder="Registration Date" value={this.state.clientsData.date} />
           </div>
         </div>
         <div className="form-group row">
@@ -49,7 +50,7 @@ class Client extends React.Component {
             <label>Address</label>
           </div>
           <div className="col-sm-5">
-            <input type="text" className="form-control" placeholder="Your Address" value={this.state.clientsData.address} />
+            <input type="text" className="form-control" readOnly placeholder="Your Address" value={this.state.clientsData.address} />
           </div>
         </div>
         <hr />

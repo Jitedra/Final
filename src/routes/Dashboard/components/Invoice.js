@@ -4,10 +4,11 @@ class Invoice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      invoiceData:{}
+      invoiceData:{},
     }
   }
 
+  //Getting data from localStorage
   componentWillMount() {
     const invoice = JSON.parse(localStorage.getItem('Invoice'));
       this.setState({
